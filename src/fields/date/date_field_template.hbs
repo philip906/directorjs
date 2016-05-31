@@ -1,0 +1,21 @@
+<div>
+  {{#ifCond config.title '||' config.tooltip}}
+  <div class="field-details">
+    {{#if config.title}}
+    <span>{{config.title}}</span>
+    {{/if}}
+    {{#if config.tooltip}}
+    <span data-toggle="tooltip" data-placement="top" title="{{config.tooltip}}">
+      <span class="glyphicon glyphicon-question-sign infotip" aria-hidden="true"></span>
+    </span>
+    {{/if}}
+  </div>
+  {{/ifCond}}
+
+  <div class="input-group date date-picker">
+      <input type="text" placeholder="{{config.placeholder}}" class="form-control" />
+      <span class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<select class="dropdown-filter-component">
+	{{#if selected_value}}
+		{{#selectValue selected_value}}
+		    {{#each list}}
+		  	<option value="{{id}}">{{name}}</option>
+			{{/each}}
+		{{/selectValue}}
+	{{else}}
+		{{#selectIndex default_selected_index}}
+		    {{#each list}}
+		  	<option value="{{id}}">{{name}}</option>
+			{{/each}}
+		{{/selectIndex}}
+	{{/if}}
+</select>

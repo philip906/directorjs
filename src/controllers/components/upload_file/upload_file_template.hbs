@@ -1,0 +1,16 @@
+{{#ifCond title '||' tooltip}}
+<div class="field-details">
+	{{#if title}}
+	<span>{{title}}</span>
+	{{/if}}
+	{{#if tooltip}}
+	<span data-toggle="tooltip" data-placement="top" title="{{tooltip}}">
+		<span class="glyphicon glyphicon-question-sign infotip" aria-hidden="true"></span>
+	</span>
+	{{/if}}
+</div>
+{{/ifCond}}
+<div>
+	<div class="dropzone-error"></div>
+	<form class="dropzone"></form>
+</div>

@@ -1,0 +1,17 @@
+{{#ifCond config.title '||' config.tooltip}}
+<div class="field-details">
+	{{#if config.title}}
+	<span>{{config.title}}</span>
+	{{/if}}
+	{{#if config.tooltip}}
+	<span data-toggle="tooltip" data-placement="top" title="{{config.tooltip}}" >
+		<span class="glyphicon glyphicon-question-sign infotip" aria-hidden="true"></span>
+	</span>
+	{{/if}}
+</div>
+{{/ifCond}}
+{{#if config.immutable}}
+<textarea placeholder="{{config.placeholder}}" disabled >{{value}}</textarea>
+{{else}}
+<textarea placeholder="{{config.placeholder}}" >{{value}}</textarea>
+{{/if}}

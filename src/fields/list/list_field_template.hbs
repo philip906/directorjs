@@ -1,0 +1,32 @@
+{{#ifCond config.title '||' config.tooltip}}
+<div class="field-details">
+	{{#if config.title}}
+	<span>{{config.title}}</span>
+	{{/if}}
+	{{#if config.tooltip}}
+	<span data-toggle="tooltip" data-placement="top" title="{{config.tooltip}}">
+		<span class="glyphicon glyphicon-question-sign infotip" aria-hidden="true"></span>
+	</span>
+	{{/if}}
+</div>
+{{/ifCond}}
+{{#if config.list.length}}
+<select
+	{{#ifCond key '==' '0'}}
+		{{#ifCond value '==' config.first_item.value}}
+			{{#if config.first_item.immutable}}disabled{{/if}}
+		{{/ifCond}}
+	{{/ifCond}}>
+  	{{#selectIndex selectedIndex}}
+    {{#each config.list}}
+	<option value="{{id}}">{{name}}</option>
+    {{/each}}
+    {{/selectIndex}}
+</select>
+{{#if config.custom_list_item}}
+<input class="custom-list-field-item-txt" type="input" placeholder="{{config.custom_list_item.placeholder}}" />
+{{/if}}
+{{else}}
+<span class="empty-field-data-link">{{config.dependency.create_new_title}}</span>
+<span class="empty-field-reload-link glyphicon glyphicon-refresh">Reload</span>
+{{/if}}

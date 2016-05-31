@@ -1,0 +1,16 @@
+<div class="field-details">
+	{{#if config.title}}
+	<span>{{config.title}}</span>
+	{{/if}}
+	{{#if config.tooltip}}
+	<span data-toggle="tooltip" data-placement="top" title="{{config.tooltip}}">
+		<span class="glyphicon glyphicon-question-sign infotip" aria-hidden="true"></span>
+	</span>
+	{{/if}}
+</div>
+
+<div multihash-list-view></div>
+
+<div class="multi-field-btn-holder bnt-center">
+	<input class="add-multihash-item-btn add-new-field-list-item-btn" type="button" value="{{config.add_button_label}}" />
+</div>

@@ -1,0 +1,13 @@
+<div data-list-item-index="{{key}}" >
+	{{#ifCond key '==' '0'}}
+		{{#if config.first_item}}
+		<div data-field="{{baseKey}}" class="constant-first-item"></div>
+		{{else}}
+		<div data-field="{{baseKey}}"></div>
+		<span class="delete-multilist-item-btn glyphicon glyphicon-remove"></span>
+		{{/if}}
+	{{else}}
+	<div data-field="{{baseKey}}"></div>
+	<span class="delete-multilist-item-btn glyphicon glyphicon-remove"></span>
+	{{/ifCond}}
+</div>
